@@ -987,7 +987,7 @@ See [LICENSE](LICENSE) for full text.
 ## Support
 
 - **Issues**: [GitHub Issues](https://github.com/kofany/fe-web/issues)
-- **IRC**: `#irssi` on Libera.Chat
+- **IRC**: `#erssi` on Libera.Chat or IRCnet
 - **Documentation**: See [docs/](docs/) directory
 
 ---
