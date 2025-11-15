@@ -44,45 +44,42 @@ brew install irssi glib openssl pkg-config
 
 ## Building
 
-### Method 1: Makefile (Quick & Simple)
+### Using Meson (Recommended)
 
 ```bash
 # Clone or download this repository
 cd irssi-fe-web
 
-# Build
-make
-
-# Install to ~/.irssi/modules
-make install
-```
-
-### Method 2: Meson (Recommended for packaging)
-
-```bash
-# Configure
+# Configure build
 meson setup build
 
-# Build
+# Compile
 ninja -C build
 
-# Install
+# Install to ~/.local/lib/irssi/modules
 ninja -C build install
 ```
 
 ### Build Configuration
 
-If irssi headers are in a non-standard location:
-
-```bash
-export IRSSI_INCLUDE=/path/to/irssi/include
-make
-```
-
-Or for Meson:
+#### Custom irssi headers location
 
 ```bash
 meson setup build -Dirssi_include=/path/to/irssi/include
+```
+
+#### System-wide installation
+
+```bash
+meson setup build --prefix=/usr
+sudo ninja -C build install
+```
+
+#### User installation (default)
+
+```bash
+meson setup build --prefix=$HOME/.local
+ninja -C build install
 ```
 
 ## Usage

@@ -1,0 +1,6 @@
+# Build options for irssi-fe-web
+
+option('irssi_include',
+  type : 'string',
+  value : '',
+  description : 'Path to irssi include directory (auto-detected if not set)')
